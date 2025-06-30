@@ -28,3 +28,52 @@ npm run db:push
 npm run build
 node .next/standalone/server.js
 
+---
+
+## 📦 Features Implemented
+
+- ✅ Responsive UI with modular components
+- ✅ Weather widget using OpenWeatherMap API
+- ✅ News widget with live headlines
+- ✅ AI-powered PDF chat functionality
+- ✅ Memory-based threaded chat interface
+- ✅ Clean architecture and folder structure
+- ✅ Standalone build for easy deployment
+
+---
+
+
+
+
+## 📁 Project Structure (Highlights)
+/app
+└── chat/
+└── dashboard/
+└── layout.tsx
+/components
+└── ui/
+└── widgets/
+/lib
+└── utils.ts
+└── pdf.ts
+/public
+/styles
+.env.example
+
+
+---
+
+## 📬 Submission Details
+
+- **GitHub Repo:** [https://github.com/PraveenAntenor/Perplexica-KareAI-Assignment](https://github.com/PraveenAntenor/Perplexica-KareAI-Assignment)
+- **Demo Video:** [https://www.loom.com/share/5668232ce49d4f5ba9b4ce0f04ed8d48?sid=42b60978-e6c4-40e5-9b72-19c4ea0dfc6e](https://www.loom.com/share/5668232ce49d4f5ba9b4ce0f04ed8d48?sid=42b60978-e6c4-40e5-9b72-19c4ea0dfc6e)
+
+---
+
+## 🙏 Thank You
+
+Thank you KareAI for the opportunity. Looking forward to your review and feedback!
+
+
+
+
