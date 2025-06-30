@@ -61,18 +61,7 @@ node .next/standalone/server.js
 .env.example
 
 
----
 
-## 📬 Submission Details
-
-- **GitHub Repo:** [https://github.com/PraveenAntenor/Perplexica-KareAI-Assignment](https://github.com/PraveenAntenor/Perplexica-KareAI-Assignment)
-- **Demo Video:** [https://www.loom.com/share/5668232ce49d4f5ba9b4ce0f04ed8d48?sid=42b60978-e6c4-40e5-9b72-19c4ea0dfc6e](https://www.loom.com/share/5668232ce49d4f5ba9b4ce0f04ed8d48?sid=42b60978-e6c4-40e5-9b72-19c4ea0dfc6e)
-
----
-
-## 🙏 Thank You
-
-Thank you KareAI for the opportunity. Looking forward to your review and feedback!
 
 
 
