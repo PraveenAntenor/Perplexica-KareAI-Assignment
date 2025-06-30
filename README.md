@@ -21,8 +21,8 @@ This is the completed frontend assignment for KareAI, featuring a fully function
 ### Clone & Setup
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/PraveenAntenor/Perplexica-KareAI-Assignment.git
+cd Perplexica
 npm install
 npm run db:push
 npm run build
