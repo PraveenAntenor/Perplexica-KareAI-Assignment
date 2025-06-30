@@ -2,7 +2,7 @@
 
 import DeleteChat from '@/components/DeleteChat';
 import { cn, formatTimeDifference } from '@/lib/utils';
-import { BookOpenText, ClockIcon, Delete, ScanEye } from 'lucide-react';
+import { BookOpenText, ClockIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -19,19 +19,30 @@ const Page = () => {
 
   useEffect(() => {
     const fetchChats = async () => {
-      setLoading(true);
+      try {
+        setLoading(true);
 
-      const res = await fetch(`/api/chats`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+        const res = await fetch(`/api/chats`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
 
-      const data = await res.json();
+        const data = await res.json();
 
-      setChats(data.chats);
-      setLoading(false);
+        // Safely handle undefined/null
+        if (Array.isArray(data.chats)) {
+          setChats(data.chats);
+        } else {
+          setChats([]);
+        }
+      } catch (error) {
+        console.error('Error fetching chats:', error);
+        setChats([]);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchChats();
@@ -65,6 +76,7 @@ const Page = () => {
         </div>
         <hr className="border-t border-[#2B2C2C] my-4 w-full" />
       </div>
+
       {chats.length === 0 && (
         <div className="flex flex-row items-center justify-center min-h-screen">
           <p className="text-black/70 dark:text-white/70 text-sm">
@@ -72,6 +84,7 @@ const Page = () => {
           </p>
         </div>
       )}
+
       {chats.length > 0 && (
         <div className="flex flex-col pb-20 lg:pb-2">
           {chats.map((chat, i) => (
@@ -82,7 +95,7 @@ const Page = () => {
                   ? 'border-b border-white-200 dark:border-dark-200'
                   : '',
               )}
-              key={i}
+              key={chat.id}
             >
               <Link
                 href={`/c/${chat.id}`}
